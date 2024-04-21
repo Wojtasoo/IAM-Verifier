@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Action": [
+                "iam:ListRoles",
+                "iam:ListUsers"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Deny",
+            "Action": "iam:*",
+            "Resource": "*"
+        }
+    ]
+}

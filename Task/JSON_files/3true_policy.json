@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:*user*"
+            ],
+            "Resource": "arn:aws:s3:::/example-bucket/*",
+            "Condition": {
+                "StringLike": {
+                    "iam:ResourceTag/costCenter": [
+                        "12345",
+                        "67890"
+                    ]
+                }
+            }
+        }
+    ]
+}
