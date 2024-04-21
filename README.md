@@ -15,19 +15,25 @@ Code validating IAM policy JSON input
 #### **Running the program:**
 1. After downloading the Task folder navigate in terminal to the folders described above
 2.  If you want to just run a singular test file from the provided cases you need to open ==**IAMRolePolicyVerifier.java**== file and define ***jsonFilePath*** variable(after "/") in main method to the naming convention like here:
-		-  **For policies returning true**: ==true_policy.json== with addition of number at the beginning in range 2-10
-		- **For policies returning false**: ==false_policy.json== with addition of number at the beginning in range 2-5
-3. After defining a file you need to run following commands in terminal:
-		- **In Windows:**
+
+    -  **For policies returning true**: ==true_policy.json== with addition of number at the beginning in range 2-10
+
+    - **For policies returning false**: ==false_policy.json== with addition of number at the beginning in range 2-5
+4. After defining a file you need to run following commands in terminal:
+
+   - **In Windows:**
 			`javac -cp ".;.\lib\json-java.jar" .\src\main\java\verifier\IAMRolePolicyVerifier.java`
 			`java -cp ".;.\lib\json-java.jar; .\src\main\java" verifier.IAMRolePolicyVerifier`
-		-  **In Unix based system**: change "*;" to ":*"
+
+   -  **In Unix based system**: change "*;" to ":*"
 
 #### **Running tests:**
 1. Navigate to project's root directory
 2. Run following commands:
-		-  **In Windows:**
+
+   -  **In Windows:**
 			`javac -cp ".;.\lib\junit-4.13.2.jar;.\lib\hamcrest-core-1.3.jar;.\lib\json-java.jar" .\src\main\java\verifier\IAMRolePolicyVerifier.java .\src\test\java\verifier\PolicyTests.java`
 			`java -cp ".;.\lib\junit-4.13.2.jar;.\lib\hamcrest-core-1.3.jar;.\lib\json-java.jar;.\src\main\java;.\src\test\java" org.junit.runner.JUnitCore verifier.PolicyTests`
-		- **In Unix based system:** change "*;" to ":*"
+
+   - **In Unix based system:** change "*;" to ":*"
 
