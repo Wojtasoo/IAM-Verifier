@@ -1,13 +1,13 @@
 # IAM-Verifier
 Code validating IAM policy JSON input
 
-**Tech Stack: 
+Tech Stack: 
 - Java 21
 - Junit 4.13.2 framework
 -  Package *org.json*, source -> [GithubRepo](https://github.com/stleary/JSON-java?tab=readme-ov-file)
 
 #### **Project Structure:**
--  Source codes for the verifier method and test are inside ***src*** **directory**  ***main/java/verifier*** and **test/java/verifier** accordingly
+-  Source codes for the verifier method and test are inside ***src*** **directory**:  ***main/java/verifier*** and **test/java/verifier** accordingly
 - Libraries used in the program are inside ***lib folder*** as jar files
 -  Resources as JSON input files are located inside ***JSON_files folder***
 - Class path file defining directories of source codes and libraries is located in project's root directory under the name ==**.classpath.xml**== 
