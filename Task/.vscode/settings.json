@@ -1,1 +1,9 @@
-{}
+{
+    "java.project.sourcePaths": ["src/main/java", "src/test/java"],
+    "java.project.outputPath": "out",
+    "java.project.referencedLibraries": [
+        "lib/json-java.jar",
+        "lib/junit-4.13.2.jar",
+        "lib/hamcrest-core-1.3.jar"
+    ]
+}

@@ -97,15 +97,15 @@ public class IAMRolePolicyVerifier {
         } catch (IOException e) {
 
             System.err.println("Error reading file: " + e.getMessage());
-            return true; // File reading error
+            return false; // File reading error
         } catch (JSONException e) {
 
             System.err.println("Error parsing JSON: " + e.getMessage());
-            return true; // JSON parsing error
+            return false; // JSON parsing error
         } catch (InvalidPolicyConstruct e) {
 
             System.err.println("Structure error: " + e.getMessage());
-            return true; // Invalid policy structure
+            return false; // Invalid policy structure
         }
     }
 
@@ -121,8 +121,9 @@ public class IAMRolePolicyVerifier {
         boolean result = verifyIAMRolePolicy(jsonFilePath);
         System.out.println("Verification Result: " + result);
     }
-    // Compile: javac -cp ".;.\lib\json-java.jar"
-    // .\src\main\java\verifier\IAMRolePolicyVerifier.java
-    // Run: java -cp ".;.\lib\json-java.jar;.\src\main\java"
-    // verifier.IAMRolePolicyVerifier
+    /*javac -cp ".;lib/json-java.jar" -d out src/main/java/verifier/IAMRolePolicyVerifier.java
+    java -cp ".;lib/json-java.jar;out" verifier.IAMRolePolicyVerifier
+
+    javac -cp "lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar;lib/json-java.jar;out/main" -d out/test src/test/java/verifier/PolicyTests.java
+    java -cp "lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar;lib/json-java.jar;out/main;out/test" org.junit.runner.JUnitCore verifier.PolicyTests */
 }
